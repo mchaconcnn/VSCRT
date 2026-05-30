@@ -46,7 +46,7 @@ From this folder, package and install the extension:
 - VSCRT includes runtime logic that updates `terminal.integrated.fontFamily` when you switch between VSCRT themes and restores your previous terminal font when you leave VSCRT themes.
 - You can disable this behavior with `"vscrt.autoTerminalFont": false`.
 - You can manually force synchronization with the Command Palette action: `VSCRT: Re-apply Terminal Font`.
-- If the terminal still looks unchanged, install the bundled fonts from `fonts/` and reload VS Code.
+- If the terminal still looks unchanged, install the required fonts in your OS and reload VS Code.
 
 Example per-theme overrides in your own settings:
 
