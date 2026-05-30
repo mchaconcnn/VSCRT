@@ -1,0 +1,79 @@
+{
+  "name": "vscrt-theme-pack",
+  "displayName": "VSCRT Theme Pack",
+  "description": "Retro CRT-inspired VS Code themes: Amber, Green, Commodore 64, and Apple IIc.",
+  "version": "0.0.6",
+  "publisher": "marcochaconmora",
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "crt",
+    "retro",
+    "amber",
+    "green",
+    "terminal",
+    "commodore",
+    "c64",
+    "blue",
+    "apple",
+    "apple2",
+    "appleiic"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcochaconmora/vscrt-theme-pack"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscrt.reapplyTerminalFont",
+        "title": "VSCRT: Re-apply Terminal Font"
+      }
+    ],
+    "themes": [
+      {
+        "label": "VSCRT Amber Monitor",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vscrt-amber-color-theme.json"
+      },
+      {
+        "label": "VSCRT Green Monitor",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vscrt-green-color-theme.json"
+      },
+      {
+        "label": "VSCRT Commodore 64",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vscrt-commodore64-color-theme.json"
+      },
+      {
+        "label": "VSCRT Apple IIc",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vscrt-apple2c-color-theme.json"
+      }
+    ],
+    "configurationDefaults": {
+      "terminal.integrated.fontFamily": "PxPlus IBM VGA8, Perfect DOS VGA 437 Win, IBM VGA 8x16, Cascadia Mono"
+    },
+    "configuration": {
+      "title": "VSCRT",
+      "properties": {
+        "vscrt.autoTerminalFont": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically switch terminal fontFamily to match the active VSCRT theme and restore the previous value when leaving VSCRT themes."
+        }
+      }
+    }
+  },
+  "license": "MIT"
+}
